@@ -277,7 +277,7 @@ install.man-nobuild: ## Install the man pages.
 	install ${SELINUXOPT} -m 644 $(filter %.8,$(MANPAGES)) -t $(MANDIR)/man8
 
 .PHONY: install.man
-install.man: $(MANPAGES) install.man-nobuild ## Build and install the man pages.
+install.man: docs install.man-nobuild ## Build and install the man pages.
 
 .PHONY: install.config-nobuild
 install.config-nobuild: ## Install the configuration files.
